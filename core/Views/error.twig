@@ -1,0 +1,9 @@
+{ extends 'base.twig' }
+
+{ block title }{{ code }}{ endblock }
+
+{ block content }
+	<div class='rows'>
+		<div class='col-md-6 col-lg-6 visible-md-block visible-lg-block'>{{ code|flash(message)|raw }}</div>     
+    </div>
+{ endblock }

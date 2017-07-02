@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        { block head }
+            <title>{ block title }{ endblock } | TECHiNA</title>
+            <meta charset='UTF-8'><meta name='X-XSS-Protection' content='1;mode=block'>
+            <meta name='viewport' content='width=device-width,initial-scale=1,user-scalable=no'>
+        { endblock }
+    </head>
+    <body>
+      <nav class="navbar navbar-inverse navbar-fixed-top lucent">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand brand" href="/">TECHiNA</a> 
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              { if loggedin }
+              <li><a href='/home'><span class="glyphicon glyphicon-home"></span> Home</a></li>
+              { else }
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">About <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="/about">About Us</a></li>
+                  <li><a href="/privacy">Privacy</a></li>
+                  <li><a href="/tos">Terms Of Service</a></li>
+                </ul>
+              </li>
+              { endif }
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              { if loggedin }
+            
+              <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+
+              { else }
+
+              <li><a href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+              <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
+
+              { endif }
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+        { block content }{ endblock }
+
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans|Montserrat' rel='stylesheet'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href='{{ "css"|url_for("repo") }}'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script src='{{ "js"|url_for("repo") }}'></script>
+        { block footer }{ endblock }
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script>
+          UPLOADCARE_LOCALE = "en";
+          UPLOADCARE_TABS = "file facebook url gdrive dropbox instagram";
+          UPLOADCARE_PUBLIC_KEY = "ca878b77157a29ed8716";
+        </script>
+        <script src="https://ucarecdn.com/widget/2.9.0/uploadcare/uploadcare.min.js" charset="utf-8"></script>
+    </body>
+</html>

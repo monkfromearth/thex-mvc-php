@@ -1,0 +1,13 @@
+{
+    "require": {
+        "illuminate/database": "^5.2",
+        "Twig/Twig": "^1.24",
+        "phpmailer/phpmailer": "^5.2.14",
+        "filp/whoops": "^2.1.2",
+    },
+    "autoload": {
+    	"classmap": [
+    		"core/Models"
+    	]
+    }
+}

@@ -1,0 +1,40 @@
+{ extends 'base.twig' }
+
+{ block title}Sign In{ endblock }
+
+{ block content }
+<div class='container'>
+	<div class='rows'>
+		<div class="col-md-6 col-lg-6 visible-md-block visible-lg-block">
+			<div class='panel panel-default'>
+				<div class='panel-heading'><strong>Sign in to <span class='brand'>TECHiNA</span> </strong></div>
+				<div class='panel-body'>
+					<form role='form' method='POST' action='/login' id='loginf'>
+						<input type="hidden" name="integrity" value='{{ integrity }}'>
+						<div class='form-group'>
+							<label for="email">Email Address</label>
+							<input type="email" name="email" id="email" placeholder="Your Email Address" class="form-control" value="{{ email }}">
+						</div>
+						<div class="form-group">
+							<label for="password">Password</label>
+							<input type="password" name="password" id="password" placeholder="Your Password" class="form-control">
+						</div>
+						<div class="form-group">
+							<button type='submit' class='btn btn-success' id='login'>Login</button>
+							<a href='/forgot' class='btn btn-link'>Forgot</a>
+						</div>
+						{ if code|length > 0}
+						{{ code|flash(message)|raw }}
+						{ endif }
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 col-lg-6 visible-md-block visible-lg-block"></div>
+	</div>
+</div>
+{ endblock }
+
+{ block footer }
+<script src="{{ 'js'|url_for('login') }}"></script>
+{ endblock }

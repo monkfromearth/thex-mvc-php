@@ -1,0 +1,67 @@
+html, body {
+	margin:0; padding:50px 0 0 0;
+	font-family:'Open Sans', 'Segoe UI' , 'Helvetica', sans-serif;
+}
+
+/* Created Classes */
+.center-vertical {
+    position:relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.lucent {
+    opacity:0.8;
+}
+
+.brand, .btn, .uploadcare-widget-button-open, .uploadcare-widget-button-cancel, .uploadcare-widget-button-remove {
+    font-family:'Montserrat',sans-serif;
+}
+
+.btn-dark, .bg-dark {
+    background:#303030;color:#d5d5d5;
+}
+
+/* Overridding Classes */
+
+.bg-dark:hover, .btn-dark:hover, .btn-dark:focus {
+    color:#FFF;
+}
+
+.navbar {
+	border-radius:0;
+    margin-bottom:0;
+    background-color: #202020;
+}
+
+.navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+}
+
+.navbar-nav li a:hover {
+    color: #fff !important;
+}
+
+.dropdown-menu, .dropdown-menu li a:hover {
+	background-color:#202020;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color:transparent;
+}
+
+h2, h3 {
+    margin-bottom:25px;
+}
+
+.uploadcare-widget-circle {
+  width:32px;height:32px;border-radius:8px;
+  color:#303030;border-color:#d5d5d5;
+}
+
+.uploadcare-widget-button-open, .uploadcare-widget-button-open:hover {
+    padding:10px;color:#FFFFFF;
+    background-color:#303030;
+}
