@@ -6,7 +6,7 @@ class HomeController extends Controller {
 		$this->middleware('auth');
 	}
 
-	public function index(){
+	public function home(){
 		return $this->view('index');
 	}
 

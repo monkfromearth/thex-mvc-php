@@ -19,7 +19,7 @@ class Controller {
     
     protected function view($view, $params = []){
         $twig = Twig::get();
-        $loggedin = Session::isLoggedIn();
+        $loggedin = /*Session::isLoggedIn()*/ false;
         $parameter = [ 
                         'loggedin'  => $loggedin, 
                         'integrity' => Repo::getToken(), 

@@ -1,9 +1,9 @@
 <?php 
 
-$whoops = new \Whoops\Run;
+/*$whoops = new \Whoops\Run;
 $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 $whoops->register();
-
+*/
 /*
 $faker = Faker\Factory::create();
 for ($i = 0; $i < 50; $i++) {
